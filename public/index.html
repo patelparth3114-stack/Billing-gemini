@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aksharam Stationery And Mart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22Playfair Display%22 fill=%22%23C9A84C%22>A</text></svg>">
+</head>
+<body>
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="confirm-title">Confirm Action</h3>
+            <p id="confirm-message">Are you sure?</p>
+            <div class="modal-actions">
+                <button id="confirm-cancel" class="btn btn-secondary">Cancel</button>
+                <button id="confirm-ok" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Shell -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-area" id="sidebar-logo-area">
+                    <h1 class="logo-text">AKSHARAM</h1>
+                </div>
+                <button id="mobile-menu-close" class="mobile-only icon-btn">✕</button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#/billing" class="nav-item active" data-page="billing">
+                    <span class="nav-icon">🧾</span> New Bill
+                </a>
+                <a href="#/history" class="nav-item" data-page="history">
+                    <span class="nav-icon">📋</span> Bill History
+                </a>
+                <a href="#/inventory" class="nav-item" data-page="inventory">
+                    <span class="nav-icon">📦</span> Inventory
+                </a>
+                <a href="#/customers" class="nav-item" data-page="customers">
+                    <span class="nav-icon">👥</span> Customers
+                </a>
+                <a href="#/grants" class="nav-item" data-page="grants">
+                    <span class="nav-icon">💰</span> Grants
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#/settings" class="nav-item" data-page="settings">
+                    <span class="nav-icon">⚙️</span> Settings
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header mobile-only">
+                <button id="mobile-menu-open" class="icon-btn">☰</button>
+                <h2 class="page-title-mobile">Aksharam</h2>
+            </header>
+            
+            <div id="page-container" class="page-container">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Print Container (Hidden in UI, used for printing) -->
+    <div id="print-container"></div>
+
+    <!-- Scripts -->
+    <!-- Page Modules -->
+    <script src="/pages/inventory.js"></script>
+    <script src="/pages/customers.js"></script>
+    <script src="/pages/billing.js"></script>
+    <script src="/pages/history.js"></script>
+    <script src="/pages/quotation.js"></script>
+    <script src="/pages/grants.js"></script>
+    <script src="/pages/settings.js"></script>
+    
+    <!-- Print Modules -->
+    <script src="/print/bill-print.js"></script>
+    <script src="/print/quotation-print.js"></script>
+    
+    <!-- Main App Logic -->
+    <script src="/app.js"></script>
+</body>
+</html>
